@@ -1,0 +1,16 @@
+﻿@page
+@model Kudu.Services.Web.Pages.NewUI.utilitiesModel
+@using Kudu.Core;
+@using Kudu.Services
+@using Microsoft.Extensions.FileProviders;
+
+<h4>Utilities</h4>
+
+<!-- Render toast notifications here -->
+<div id="toast"></div>
+
+<div id="containerFileManager">
+    <form method="POST">
+        <button type="submit" asp-route-data="collectNWTrace" asp-page="utilities" asp-page-handler="collectNWTrace">Collect N/W Trace</button>
+    </form>
+</div>
