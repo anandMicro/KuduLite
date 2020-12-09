@@ -32,7 +32,7 @@ namespace Kudu.Services.Web.Pages.NewUI
                     client.RunCommand("mkdir testFolder");
                     client.RunCommand("cd testFolder");
                     client.RunCommand("cd testFolder");
-                    client.RunCommand("tcpdump -i eth0 -s 65535 -w networkTrace1.cap");
+                    client.RunCommand("timeout 10 tcpdump -i eth0 -s 65535 -w networkTrace1.cap");
                     client.Disconnect();
                 }
             }
